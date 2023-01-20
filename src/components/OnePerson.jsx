@@ -6,7 +6,7 @@ import axios from "axios";
 function OnePerson() {
   const { id } = useParams();
   const [person, setPerson] = useState(null);
-  const [error,setError] = useState(false);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     axios
@@ -14,12 +14,11 @@ function OnePerson() {
       .then((res) => {
         console.log(res.data);
         setPerson(res.data);
-        setError (false);
+        setError(false);
       })
-      .catch((err) => { 
-      console.log(err);
-      setError(true);
-      
+      .catch((err) => {
+        console.log(err);
+        setError(true);
       });
   }, [id]);
 
@@ -34,10 +33,10 @@ function OnePerson() {
           <p>Hair Color : {person.hair_color}</p>
           <p>Skin Color : {person.skin_color}</p>
         </div>
-      ) :( 
+      ) : (
         <>
-      <img src='./public/obi_juan.webp' />
-      <h1> These arent the droids youre looking for </h1>
+          <img src="https://preview.redd.it/8bymt8fje2e01.jpg?width=960&crop=smart&auto=webp&v=enabled&s=8568736a8ccf3e1905eb83afe47802a068d9fecc" />
+          <h1> These arent the droids youre looking for </h1>
         </>
       )}
     </div>

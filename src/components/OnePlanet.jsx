@@ -38,7 +38,11 @@ function OnePlanet() {
           <p>Surface water : {planet.surface_water}</p>
           <p>Population : {planet.population}</p>
         </div> 
-      ) : ( <h1> These arent the droids youre looking for </h1>
+      ) : ( 
+      <>
+      <img src="https://preview.redd.it/8bymt8fje2e01.jpg?width=960&crop=smart&auto=webp&v=enabled&s=8568736a8ccf3e1905eb83afe47802a068d9fecc" />
+      <h1> These arent the droids youre looking for </h1>
+      </>
       )}
     </div>
   );
